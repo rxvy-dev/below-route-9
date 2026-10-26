@@ -1,0 +1,225 @@
+# BELOW ROUTE 9
+
+![BELOW ROUTE 9](docs/logo.png)
+
+A first-person Backrooms horror game for **Linux**. (Windows has its own repo: [Below-Route-9-Windows](https://github.com/rxvy-dev/Below-Route-9-Windows).)
+
+> **Formerly LIMINAL SHIFT.** Same game, new name. Saves from the old version live in a `liminal-shift` folder; rename it to `below-route-9` to keep your progress (see [Saves](#saving)).
+
+You're Dana, working the last closing shift of the week at the Quik-Stop on Route 9. Ring people up, restock, mop. At 10:00 the power dies. You call Ray, the late-night electrician, and take him down to the basement panel. The wiring doesn't go anywhere. Then the floor lets go, and when you land, Ray is gone.
+
+Below: endless yellow offices, concrete warehouses, steam tunnels, the Poolrooms, a level where every light has died. Levels never repeat. Get to the bottom and get out.
+
+No combat. You survive by listening, staying quiet, following the arrows the Survey painted on the walls, and running when something finds you.
+
+| | |
+|---|---|
+| ![Night shift at the Quik-Stop](docs/screenshots/storecustomers.jpg) | ![The power goes out](docs/screenshots/storeout.jpg) |
+| ![Ray at the basement panel](docs/screenshots/storebasement.jpg) | ![Ending: his daughter](docs/screenshots/endingA4.jpg) |
+| ![Ending: home, but wrong](docs/screenshots/endingB5.jpg) | ![Ending: sunrise](docs/screenshots/endingB16.jpg) |
+| ![Level 0](docs/screenshots/play.jpg) | ![Flashlight in a dark zone](docs/screenshots/dark.jpg) |
+| ![The Tenant](docs/screenshots/tenant.jpg) | ![The Hound](docs/screenshots/hound.jpg) |
+| ![The Grin](docs/screenshots/grin.jpg) | ![Survey camp](docs/screenshots/camp.jpg) |
+| ![Habitable Zone](docs/screenshots/level1.jpg) | ![Pipe Dreams](docs/screenshots/level2.jpg) |
+| ![The Poolrooms](docs/screenshots/level3.jpg) | ![Lights Out](docs/screenshots/level4.jpg) |
+| ![Painted arrow](docs/screenshots/clue.jpg) | ![Falling into the next level](docs/screenshots/transition.jpg) |
+
+## Install
+
+You need a GPU with OpenGL 3.3 (anything from roughly 2010 on).
+
+### Linux
+
+Works on Ubuntu, Debian, Mint, Pop!_OS, Fedora, Arch, Manjaro, EndeavourOS, openSUSE, Void, Alpine, Gentoo, Solus and NixOS, on X11 or Wayland, with Nvidia, AMD or Intel graphics.
+
+**From the release zip:**
+
+```sh
+unzip Below-Route-9.zip
+cd Below-Route-9
+./install.sh
+```
+
+**Or from git:**
+
+```sh
+git clone https://github.com/rxvy-dev/Below-Route-9
+cd Below-Route-9
+./install.sh
+```
+
+`install.sh` detects your package manager, asks before installing the build dependencies (a C++17 compiler, CMake, pkg-config and SDL2), builds the game, and installs it to `~/.local` with a desktop entry and icon. No root needed except for the package install.
+
+Then open **BELOW ROUTE 9** from your app menu, or run `below-route-9`. If your shell can't find it, add `~/.local/bin` to your `PATH` (the installer tells you if it's missing).
+
+**One-line install** (does all of the above):
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/rxvy-dev/Below-Route-9/main/install.sh | bash
+```
+
+**Update:** `git pull && ./install.sh` from the folder. **Uninstall:** `./install.sh --uninstall` (your saves are kept).
+
+| Installer option | What it does |
+|---|---|
+| `--prefix DIR` | Install somewhere else |
+| `--system` | Install to `/usr/local` for all users |
+| `--no-deps` | Skip the package manager step |
+| `--uninstall` | Remove the game (saves are kept) |
+| `-y` | Don't ask before installing packages |
+
+### Building by hand
+
+```sh
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build -j
+./build/below-route-9
+```
+
+The only dependency is SDL2. All textures, models and sounds are generated at startup, so the binary is self-contained.
+
+## Controls
+
+| Action | Keyboard / mouse | Gamepad |
+|---|---|---|
+| Move | WASD | Left stick |
+| Look | Mouse | Right stick |
+| Run | Shift | L3 / LT |
+| Jump | Space | X |
+| Crouch (quiet) | Ctrl or C | B (hold) |
+| Flashlight | F or right mouse | LB |
+| Use / read / hide | E or left mouse | A |
+| Put Ray down | G | Y |
+| Pause | Esc | Start |
+
+## The levels
+
+Every Backrooms level is a truly endless space: it wraps around seamlessly, so you can walk in a straight line forever. Find the thin place (listen for the static), fall through it, and you land in the next one.
+
+| Level | Space | Who lives there |
+|---|---|---|
+| Intro | **The Quik-Stop**: a ten-minute night shift with customers, restocking and spills. Then the lights go out | Customers, Ray |
+| 0 | **The Lobby**: yellow wallpaper, damp carpet, humming lights | The Tenant, the Hound, the Grin, the Stilt |
+| 1 | **Habitable Zone**: cold concrete warehouse, crate stacks, 4 m ceilings | Two Hounds, a Grin |
+| 2 | **Pipe Dreams**: narrow brick tunnels, rusted pipes, orange caged lights | The Tenant, a Hound, a Grin |
+| 37 | **The Poolrooms**: cream tile and clear green water, round columns standing in the pools, raised walkways, sunlight falling through skylights in real shadowed beams, spiral stairs climbing up through round holes in the ceiling, tunnels half under the water. Splashing is loud | The Lifeguard |
+| 4 | **Lights Out**: every fixture dead. The arrows glow | The Tenant and four Grins |
+| 188 | **The Courtyard of Windows**: a hotel atrium twelve metres deep, a wall of windows, a lawn far below | ...you |
+| Fun =) | **The Party**: orange and yellow rooms, a carpet covered in letters, balloon arches, a cake on every table. When it's somebody's birthday, get under a table | The Partygoers |
+| ! | **Run For Your Life** | Everything |
+
+### The night shift
+
+The Quik-Stop is a real store with a real outside. Walk out the front door into the rain: the lot, the gas canopy, the pumps, the cars going by on Route 9. Don't wander too far, though. Customers waiting at the counter will yell after you. Customers park at the pumps or walk in off the sidewalk. Each one picks something off the shelves and carries it to the counter. Key it into the register, take their cash, and put it in the drawer. Be quick: the longer you make them wait, the ruder they get, from "Hello?" to folded arms and knuckles on the counter to storming out. After the power goes, you'll watch Ray's van pull in with its headlights on, then see him cross the lot to the door.
+
+### The suit
+
+There's an empty yellow hazmat suit waiting at the bottom of the fall. Put it on. From then on you see your yellow sleeves and black gloves, the edge of the visor, and your breath fogging the glass, and you hear yourself breathing through the respirator.
+
+### Blinking
+
+Dana blinks every few seconds, faster when she's scared. The Grin only moves when you're not looking at it, and a blink counts. You can turn blinking off in Options.
+
+### Clues on the walls
+
+The Survey painted arrows along the real route to each exit: on the walls beside you, on the wall you're facing at every turn, and on the floor in open rooms. The thin place itself is marked with a door outlined in blue tape, with **EXIT** painted above it. Dead ends say **NOT THIS WAY**. Everything else on the walls is people who didn't make it.
+
+### Saving
+
+The game autosaves every 30 seconds (you'll see SAVED at the top of the screen), whenever you read a note, and whenever you fall into a new level. CONTINUE puts you back exactly where you were (and, if you went back for Ray, with him where you left him or still on your back). Finishing the story clears the save. Tapes, badges, endings and best depths live in a separate `profile.ini` and are never cleared.
+
+### Hiding
+
+Lockers stand against the walls on every level. Get in one without being seen and whatever is hunting you loses you. If it watched you climb in, it knows. Out in the open, turning your flashlight off in a dark stretch and crouching makes you very hard to spot.
+
+### Ray
+
+Ray fell too, but not where you did. You won't see him on the way down. Only if you take the green EXIT at the very end do you drop into the level where he's lying hurt, calling for help. Pick him up and carry him: you'll be slower, louder and tire faster. You can put him down. You can leave him. He'll beg.
+
+### Blood
+
+On most levels something was dragged a few rooms and left against a wall: smears across the carpet, splatter where it turned, a pool where it stopped, and handprints sliding down the wall above it. Now and then there's a lone print by a dead end.
+
+### Probably nothing
+
+Every minute or two, when nothing is chasing you, something small happens. Footsteps behind you that keep your pace and stop when you stop (turn around and they're gone). The lights going out one fixture at a time, coming toward you. Somebody standing very still at the far end of the hall, gone when you get close or look away. Knocking from inside the wall. Once in a while, the tape glitches, and for two frames there's a face.
+
+### Things caught mid-noclip
+
+Chairs half inside walls, boxes sunk into the floor, a cooler drifting at head height, furniture upside down on the ceiling. Everything here fell through something once.
+
+### Endings
+
+Get out of the last level and you find three holes in a wall, scrawled over in marker: a blue one marked THIS WAY, a yellow one with question marks around it, and a green one that says EXIT :). Each one is a different ending, and none of them are what you think. Every ending is shot in-engine on Ray's camcorder.
+
+### Lost tapes
+
+Two VHS tapes are hidden on every Backrooms level, sixteen in all, away from the painted route. Look for a blinking red REC light on the floor. Each one plays a camcorder transcript from the Survey team, Ray, Dana and Unit 4, and together they explain what the yellow suit is. Tapes stay found across every playthrough, and you can rewatch them under **ARCHIVE** on the title screen.
+
+### Survey badges
+
+Sixteen badges, each with a pop-up when you earn it. Some are for story moments, some for skill (escape a level without getting caught, or in under three minutes), some for the store (serve 8 customers in one shift), and four are secret until you see the matching ending. **ARCHIVE** shows the full list, which endings you've seen, and a hint for each one you haven't.
+
+### KEEP FALLING (endless)
+
+See any ending and **KEEP FALLING** unlocks on the title screen. There's no store and no Ray: you just fall from one random level into the next, forever. Every depth is meaner than the last, with hunts that come sooner and more often, fewer batteries and almond water, darker halls and more things walking them. Get caught once and the run is over. Your best depth is saved.
+
+**TODAY'S FALL** is the same run for everyone on the same day (it's seeded from the date), with its own best that resets at midnight UTC.
+
+### Running
+
+Sometimes something just *knows* where you are. An alarm sounds, the lights pulse red, the music kicks in, and you have to run until it gives up. And every time you get close to an exit, something comes up behind you. Save your stamina and an almond water for the last stretch.
+
+## Level 0 in detail
+
+- **The Tenant.** Far too tall, stooped under the ceiling. Lights dim and stutter as it gets close. It hunts by sight and sound, and it forgets you once you break line of sight.
+- **The Hound.** On all fours, no eyes. It clicks to hear the room. Running near it is a death sentence; standing still is not.
+- **The Grin.** Lives in the parts where every light has died. It's drawn to your flashlight, and it only moves when you aren't looking at it.
+- **8 notes** from Theo, the Survey and Management. Each one is a checkpoint.
+- **A way out**, if you can find the wall that isn't quite solid. Listen for the static.
+
+## Graphics
+
+**Ray tracing** (on by default; Options → RAY TRACING). The levels are tile grids, so the world shader traces real rays through them on any OpenGL 3.3 GPU, no RT cores needed. Every pixel traces shadow rays to the ceiling fixtures around it: walls, pillars and the people and things walking around block the light, and the panels are area lights, so the shadows are soft. Each fixture gives a proper highlight, and when a light flickers or dies, everything it lit reacts. Glossy floors, wet carpet and pool water trace reflection rays that hit walls, pillars, the ceiling and the lit panels, even ones that are off screen. The baked lightmap still supplies the bounce light.
+
+The camcorder filter (on by default, toggle it in Options) plays everything back like a worn VHS tape: about 330×240 lines of real resolution, smeared chroma that lags behind the picture, a wide barrel lens with rounded CRT corners, crushed blacks and an oversaturated yellow-green grade, tracking jitter, head-switching noise along the bottom, dropouts, and a PLAY / SP / VCR TAPE overlay with a running tape counter.
+
+Forward renderer on OpenGL 3.3 with:
+
+- Sculpted creatures and people (signed-distance-field sculpts meshed with Surface Nets), skinned to skeletons and animated procedurally on the GPU. People come in four outfits (tee and jeans, suit and tie, work jacket and cap, hazmat suit) with faces, hands, belts and shoes
+- First-person hands: the flashlight, cash from the till, the stock box
+- Sunlight with its own orthographic shadow map and volumetric god rays (Poolrooms), caustics under sunlit water, screen-space reflections on the pools
+- Flashlight shadow maps with PCF, GGX specular, subsurface wrap lighting on skin
+- Volumetric flashlight beam and fluorescent haze
+- SSAO, baked per-light visibility for hundreds of flickering ceiling lights
+- HDR bloom chain, ACES tonemapping and colour grade, FXAA
+- Optional camcorder look: tape jitter, chroma bleed, scanlines, timestamp
+
+Graphics presets (Low, Medium, High) are in Options. Low turns off shadows, SSAO and volumetrics and renders at 65% resolution for older integrated GPUs.
+
+## Command line
+
+```
+below-route-9 --windowed --size 1920x1080   # window size
+below-route-9 --seed 1234                   # replay a specific layout
+below-route-9 --level 3                     # start in the Poolrooms
+below-route-9 --quality 0                   # force Low preset
+below-route-9 --no-audio
+SDL_VIDEODRIVER=wayland below-route-9       # native Wayland instead of XWayland
+```
+
+Saves live in `$XDG_DATA_HOME/below-route-9` (default `~/.local/share/below-route-9`) and settings in `$XDG_CONFIG_HOME/below-route-9`.
+
+## Troubleshooting
+
+- **"OpenGL 3.3 is required"**: update Mesa, or install your GPU's driver. Check with `glxinfo -B`.
+- **No sound**: SDL picks PipeWire, PulseAudio or ALSA automatically. Try `SDL_AUDIODRIVER=pulseaudio below-route-9` or `SDL_AUDIODRIVER=alsa below-route-9`.
+- **Low frame rate**: set Graphics to Medium or Low in Options.
+
+## Roadmap
+
+See [docs/DESIGN.md](docs/DESIGN.md) for the full plan and [docs/LORE.md](docs/LORE.md) for the story bible. Next up: hiding spots, audio tapes, the Hotel and the Mall, and AppImage/Flatpak releases.
+
+## License
+
+MIT. See [LICENSE](LICENSE). The 8x8 bitmap font is public domain ([dhepper/font8x8](https://github.com/dhepper/font8x8)). The camcorder, menu and title-card text uses **VCR OSD Mono** by Riciery Leal, a free font (`assets/fonts/`), baked into `src/title_font.h` by `tools/make_title_font.py`.
