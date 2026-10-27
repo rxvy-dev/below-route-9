@@ -36,15 +36,15 @@ Works on Ubuntu, Debian, Mint, Pop!_OS, Fedora, Arch, Manjaro, EndeavourOS, open
 
 ```sh
 unzip Below-Route-9-linux.zip
-cd Below-Route-9
+cd Below-Route-9-linux
 ./install.sh
 ```
 
 **Or from git:**
 
 ```sh
-wget https://github.com/rxvy-dev/below-route-9/Below-Route-9-linux.zip
-cd Below-Route-9-linux.zip
+wget https://github.com/rxvy-dev/below-route-9/raw/refs/heads/main/Below-Route-9-linux.zip
+cd Below-Route-9-linux
 ./install.sh
 ```
 
