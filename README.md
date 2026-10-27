@@ -44,6 +44,7 @@ cd Below-Route-9-linux
 
 ```sh
 wget https://github.com/rxvy-dev/below-route-9/raw/refs/heads/main/Below-Route-9-linux.zip
+unzip Below-Route-9-linux.zip
 cd Below-Route-9-linux
 ./install.sh
 ```
