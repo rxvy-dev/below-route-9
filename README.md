@@ -36,7 +36,7 @@ Works on Ubuntu, Debian, Mint, Pop!_OS, Fedora, Arch, Manjaro, EndeavourOS, open
 
 ```sh
 unzip Below-Route-9-linux.zip
-cd Below-Route-9-linux
+cd Below-Route-9
 ./install.sh
 ```
 
@@ -45,7 +45,7 @@ cd Below-Route-9-linux
 ```sh
 wget https://github.com/rxvy-dev/below-route-9/raw/refs/heads/main/Below-Route-9-linux.zip
 unzip Below-Route-9-linux.zip
-cd Below-Route-9-linux
+cd Below-Route-9
 ./install.sh
 ```
 
