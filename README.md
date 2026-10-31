@@ -6,7 +6,7 @@ A first-person Backrooms horror game for **Linux**. (Windows has its own repo: [
 
 > **Formerly LIMINAL SHIFT.** Same game, new name. Saves from the old version live in a `liminal-shift` folder; rename it to `below-route-9` to keep your progress (see [Saves](#saving)).
 
-You're Dana, working the last closing shift of the week at the Quik-Stop on Route 9. Ring people up, restock, mop. At 10:00 the power dies. You call Ray, the late-night electrician, and take him down to the basement panel. The wiring doesn't go anywhere. Then the floor lets go, and when you land, Ray is gone.
+You're nine. It's Saturday afternoon at SKY HIGH, the trampoline park off Route 9: Mom and Dad are at the tables by the front, the music's loud, other kids are bouncing all over the court. One of the beds against the back wall has a pad that's come away from the wall, and the gap behind it is dark, and cold, and humming. You get too close, and you slip down it, and you keep falling.
 
 Below: yellow offices, a flooded parking garage, an abandoned office that counts on you, steam tunnels, the Poolrooms, a ball pit the size of a warehouse, a level where every light has died, a suburb of identical houses. Levels never repeat. Get to the bottom and get out.
 
@@ -14,7 +14,7 @@ No combat. You survive by listening, staying quiet, finding your own way out, an
 
 | | |
 |---|---|
-| ![Night shift at the Quik-Stop](docs/screenshots/storecustomers.jpg) | ![The power goes out](docs/screenshots/storeout.jpg) |
+| ![SKY HIGH trampoline park](docs/screenshots/park.jpg) | ![The gap behind the pad](docs/screenshots/parkgap.jpg) |
 | ![Ray at the basement panel](docs/screenshots/storebasement.jpg) | ![Ending: his daughter](docs/screenshots/endingA4.jpg) |
 | ![Ending: home, but wrong](docs/screenshots/endingB5.jpg) | ![Ending: sunrise](docs/screenshots/endingB16.jpg) |
 | ![Level 0](docs/screenshots/play.jpg) | ![A dark zone](docs/screenshots/dark.jpg) |
@@ -104,7 +104,7 @@ Every level is big, but it ends: walk far enough and you hit its edge. And no le
 
 | Level | Space | Who lives there |
 |---|---|---|
-| Intro | **The Quik-Stop**: a ten-minute night shift with customers, restocking and spills. Then the lights go out | Customers, Ray |
+| Intro | **SKY HIGH trampoline park**: a Saturday with Mom and Dad. Bounce (you can't help it on a bed; jump at the bottom for a big one), wade the foam pit, and find the gap behind the pads by the back wall | Mom, Dad, other kids |
 | 0 | **The Lobby**: yellow wallpaper, damp carpet, humming lights | The Tenant, the Hound, the Grin, the Stilt |
 | 1 | **Underground Parking**: rows of lettered concrete piers, a low ceiling full of sprinkler pipes, bare tubes, puddles that mirror every light, cars nobody came back for | Two Hounds, a Grin |
 | 33 | **Count On Me**: an office somebody walked out of. Beige walls, dark carpet, a mural about customer service, and two doors onto corridors a metre wide that go on much further than the building does | The Tenant, a Grin, the Stilt |
