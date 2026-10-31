@@ -15,7 +15,7 @@ No combat. You survive by listening, staying quiet, finding your own way out, an
 | | |
 |---|---|
 | ![SKY HIGH trampoline park](docs/screenshots/park.jpg) | ![The gap behind the pad](docs/screenshots/parkgap.jpg) |
-| ![Ray at the basement panel](docs/screenshots/storebasement.jpg) | ![Ending: his daughter](docs/screenshots/endingA4.jpg) |
+| ![Ending: back up through the gap, 3:14 AM](docs/screenshots/endpark.jpg) | ![Ending: Mom](docs/screenshots/endmom.jpg) |
 | ![Ending: home, but wrong](docs/screenshots/endingB5.jpg) | ![Ending: sunrise](docs/screenshots/endingB16.jpg) |
 | ![Level 0](docs/screenshots/play.jpg) | ![A dark zone](docs/screenshots/dark.jpg) |
 | ![The Tenant](docs/screenshots/tenant.jpg) | ![The Hound](docs/screenshots/hound.jpg) |
@@ -95,7 +95,7 @@ The only dependency is SDL2. All textures, models and sounds are generated at st
 | Crouch (quiet) | Ctrl or C | B (hold) |
 | NightShot (flashlight in the store) | F or right mouse | LB |
 | Use / read / hide | E or left mouse | A |
-| Put Ray down | G | Y |
+| Let go of Ray | G | Y |
 | Pause | Esc | Start |
 
 ## The levels
@@ -143,7 +143,7 @@ Lockers stand against the walls on every level. Get in one without being seen an
 
 ### Ray
 
-Ray fell too, but not where you did. You won't see him on the way down. Only if you take the green EXIT at the very end do you drop into the level where he's lying hurt, calling for help. Pick him up and carry him: you'll be slower, louder and tire faster. You can put him down. You can leave him. He'll beg.
+Ray fixes the lights at SKY HIGH. He went missing at the park years ago, the week he was supposed to fix the pads on the back wall. You won't see him on the way down. Only if you take the green EXIT at the very end do you drop into the level where he's lying hurt, calling for help. Get him up and help him along, his arm over your shoulders: you'll be slower, louder and tire faster. You can let go. You can leave him. He'll beg.
 
 ### Blood
 
@@ -159,11 +159,11 @@ Chairs half inside walls, boxes sunk into the floor, a cooler drifting at head h
 
 ### Endings
 
-Get out of the last level and you find three holes in a wall, scrawled over in marker: a blue one marked THIS WAY, a yellow one with question marks around it, and a green one that says EXIT :). Each one is a different ending, and none of them are what you think. Every ending is shot in-engine on Ray's camcorder.
+Get out of the last level and you find three holes in a wall, scrawled over in marker: a blue one marked THIS WAY, a yellow one with question marks around it, and a green one that says EXIT :). Each one is a different ending, and none of them are what you think. Every ending is shot in-engine on the camcorder: coming back up through the gap at SKY HIGH at 3:14 in the morning, Mom, the house that might not be your house, the next Saturday at the park, and what stands by the back wall after closing.
 
 ### Lost tapes
 
-Two VHS tapes are hidden on every Backrooms level, sixteen in all, away from the painted route. Look for a blinking red REC light on the floor. Each one plays a camcorder transcript from the Survey team, Ray, Dana and Unit 4, and together they explain what the yellow suit is. Tapes stay found across every playthrough, and you can rewatch them under **ARCHIVE** on the title screen.
+Two VHS tapes are hidden on every Backrooms level, sixteen in all, away from the painted route. Look for a blinking red REC light on the floor. Each one plays a camcorder transcript from the Survey team, Ray, his daughter Lily and Unit 4, and together they explain what the yellow suit is. Tapes stay found across every playthrough, and you can rewatch them under **ARCHIVE** on the title screen.
 
 ### Survey badges
 
@@ -171,7 +171,7 @@ Sixteen badges, each with a pop-up when you earn it. Some are for story moments,
 
 ### KEEP FALLING (endless)
 
-See any ending and **KEEP FALLING** unlocks on the title screen. There's no store and no Ray: you just fall from one random level into the next, forever. Every depth is meaner than the last, with hunts that come sooner and more often, fewer batteries and almond water, darker halls and more things walking them. Get caught once and the run is over. Your best depth is saved.
+See any ending and **KEEP FALLING** unlocks on the title screen. There's no trampoline park and no Ray: you just fall from one random level into the next, forever. Every depth is meaner than the last, with hunts that come sooner and more often, fewer batteries and almond water, darker halls and more things walking them. Get caught once and the run is over. Your best depth is saved.
 
 **TODAY'S FALL** is the same run for everyone on the same day (it's seeded from the date), with its own best that resets at midnight UTC.
 
@@ -191,7 +191,7 @@ Sometimes something just *knows* where you are. An alarm sounds, the lights puls
 
 **Ray tracing** (on by default; Options → RAY TRACING). The levels are tile grids, so the world shader traces real rays through them on any OpenGL 3.3 GPU, no RT cores needed. Every pixel traces shadow rays to the ceiling fixtures around it: walls, pillars and the people and things walking around block the light, and the panels are area lights, so the shadows are soft. Each fixture gives a proper highlight, and when a light flickers or dies, everything it lit reacts. Glossy floors, wet carpet and pool water trace reflection rays that hit walls, pillars, the ceiling and the lit panels, even ones that are off screen. The baked lightmap still supplies the bounce light, tinted by the walls it bounced off, and the garage's puddles mirror everything.
 
-The camcorder filter (on by default, toggle it in Options) makes it look like footage off a 2000s handycam: a 4:3 picture with black bars at the sides (switch to widescreen in Options), soft and warm, colour a little flat, blacks that sink, glow round the lights, colour noise in the shadows that gets worse as the camera's gain goes up in the dark, an autofocus that hunts now and then, the faint vertical smear a CCD sensor gets under a bright tube, interlace combing when you pan fast, the slow dark band that rolls up the frame when you film under fluorescent lights, and dust drifting through the light close to the lens. Furniture and the things that hunt you sit in their own soft shadow under the ceiling lights, and every sculpted model has fine surface relief (pores, grain, dents) that catches the light. Light bounces: it comes off the floor onto the ceiling, fills the corners of a lit room and leaks a few metres round corners and down corridors, worked out for every level when it's built. On high quality the walls, floors and ceilings are generated at twice the resolution, and people are shaped like people: a chest wider than it is deep, shoulders, shoulder blades, a waist, knees, calves, and eyes set back under proper lids. Somebody is holding it: it breathes (faster when they're scared or out of breath), dips and sways with each footstep, shakes when they run, trembles when something's near, rolls a little into turns and trails your look by a hair. You walk at a walking pace now, with real step lengths, and you take a moment to get going and to stop. The PLAY / SP / VCR TAPE overlay and the tape counter are recorded onto the picture.
+The camcorder filter (on by default, toggle it in Options) makes it look like footage off a 2000s handycam: a 4:3 picture with black bars at the sides (switch to widescreen in Options), captured straight off the tape with square corners (no fake TV screen), a video camera's response instead of a film curve (bright tubes clip hard to white, blacks sit just above black the way consumer video does), colour a little washed and tinted by the auto white balance, the thin bright halos camcorder edge enhancement leaves on every edge, a little glow round the lights, colour noise in the shadows that gets worse as the camera's gain goes up in the dark, an autofocus that hunts now and then, the faint vertical smear a CCD sensor gets under a bright tube, interlace combing when you pan fast, the slow dark band that rolls up the frame when you film under fluorescent lights, and dust drifting through the light close to the lens. Furniture and the things that hunt you sit in their own soft shadow under the ceiling lights, and every sculpted model has fine surface relief (pores, grain, dents) that catches the light. Light bounces: it comes off the floor onto the ceiling, fills the corners of a lit room and leaks a few metres round corners and down corridors, worked out for every level when it's built. On high quality the walls, floors and ceilings are generated at twice the resolution, and people are shaped like people: a chest wider than it is deep, shoulders, shoulder blades, a waist, knees, calves, and eyes set back under proper lids. Somebody is holding it: it breathes (faster when they're scared or out of breath), dips and sways with each footstep, shakes when they run, trembles when something's near, rolls a little into turns and trails your look by a hair. You walk at a walking pace now, with real step lengths, and you take a moment to get going and to stop. The PLAY / SP / VCR TAPE overlay and the tape counter are recorded onto the picture.
 
 Forward renderer on OpenGL 3.3 with:
 
