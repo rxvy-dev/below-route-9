@@ -6,7 +6,7 @@ A first-person Backrooms horror game for **Linux**. (Windows has its own repo: [
 
 > **Formerly LIMINAL SHIFT.** Same game, new name. Saves from the old version live in a `liminal-shift` folder; rename it to `below-route-9` to keep your progress (see [Saves](#saving)).
 
-You're nine. It's Saturday afternoon at SKY HIGH, the trampoline park off Route 9: Mom and Dad are at the tables by the front, the music's loud, other kids are bouncing all over the court. One of the beds against the back wall has a pad that's come away from the wall, and the gap behind it is dark, and cold, and humming. You get too close, and you slip down it, and you keep falling.
+You're nine. It's Saturday afternoon at Route 9 Park, the trampoline park off the highway: Mom and Dad are at the tables by the front, the music's loud, other kids are bouncing all over the court. One of the beds against the back wall has a pad that's come away from the wall, and the gap behind it is dark, and cold, and humming. You get too close, and you slip down it, and you keep falling.
 
 Below: yellow offices, a flooded parking garage, an abandoned office that counts on you, steam tunnels, the Poolrooms, a ball pit the size of a warehouse, a level where every light has died, a suburb of identical houses. Levels never repeat. Get to the bottom and get out.
 
@@ -14,7 +14,7 @@ No combat. You survive by listening, staying quiet, finding your own way out, an
 
 | | |
 |---|---|
-| ![SKY HIGH trampoline park](docs/screenshots/park.jpg) | ![The gap behind the pad](docs/screenshots/parkgap.jpg) |
+| ![Route 9 Park](docs/screenshots/park.jpg) | ![The gap behind the pad](docs/screenshots/parkgap.jpg) |
 | ![Ending: back up through the gap, 3:14 AM](docs/screenshots/endpark.jpg) | ![Ending: Mom](docs/screenshots/endmom.jpg) |
 | ![Ending: home, but wrong](docs/screenshots/endingB5.jpg) | ![Ending: sunrise](docs/screenshots/endingB16.jpg) |
 | ![Level 0](docs/screenshots/play.jpg) | ![A dark zone](docs/screenshots/dark.jpg) |
@@ -104,7 +104,7 @@ Every level is big, but it ends: walk far enough and you hit its edge. And no le
 
 | Level | Space | Who lives there |
 |---|---|---|
-| Intro | **SKY HIGH trampoline park**: a Saturday with Mom and Dad. Bounce (you can't help it on a bed; jump at the bottom for a big one), wade the foam pit, and find the gap behind the pads by the back wall | Mom, Dad, other kids |
+| Intro | **Route 9 Park**: a Saturday with Mom and Dad. Bounce (you can't help it on a bed; jump at the bottom for a big one), wade the foam pit, and find the gap behind the pads by the back wall | Mom, Dad, other kids |
 | 0 | **The Lobby**: yellow wallpaper, damp carpet, humming lights | The Tenant, the Hound, the Grin, the Stilt |
 | 1 | **Underground Parking**: rows of lettered concrete piers, a low ceiling full of sprinkler pipes, bare tubes, puddles that mirror every light, cars nobody came back for | Two Hounds, a Grin |
 | 33 | **Count On Me**: an office somebody walked out of. Beige walls, dark carpet, a mural about customer service, and two doors onto corridors a metre wide that go on much further than the building does | The Tenant, a Grin, the Stilt |
@@ -117,7 +117,7 @@ Every level is big, but it ends: walk far enough and you hit its edge. And no le
 | Fun =) | **The Party**: orange and yellow rooms, a carpet covered in letters, balloon arches, a cake on every table. When it's somebody's birthday, get under a table | The Partygoers |
 | ! | **Run For Your Life** | Everything |
 
-### SKY HIGH
+### Route 9 Park
 
 The trampoline park is a real place on a busy Saturday: a court of beds with blue pads and yellow corner caps, a foam pit, signs high on the walls, cubbies for your shoes, tables at the front. Mom and Dad sit at one of them; Dad's on his phone half the time, Mom keeps an eye on you. Other kids bounce all over the court. You can't help bouncing on a bed, and if you jump right at the bottom of a bounce you go a lot higher. Thirty bounces earns you a badge. One of the beds against the back wall has a pad that's come away from the wall.
 
@@ -143,7 +143,7 @@ Lockers stand against the walls on every level. Get in one without being seen an
 
 ### Ray
 
-Ray fixes the lights at SKY HIGH. He went missing at the park years ago, the week he was supposed to fix the pads on the back wall. You won't see him on the way down. Only if you take the green EXIT at the very end do you drop into the level where he's lying hurt, calling for help. Get him up and help him along, his arm over your shoulders: you'll be slower, louder and tire faster. You can let go. You can leave him. He'll beg.
+Ray fixes the lights at Route 9 Park. He went missing at the park years ago, the week he was supposed to fix the pads on the back wall. You won't see him on the way down. Only if you take the green EXIT at the very end do you drop into the level where he's lying hurt, calling for help. Get him up and help him along, his arm over your shoulders: you'll be slower, louder and tire faster. You can let go. You can leave him. He'll beg.
 
 ### Blood
 
@@ -159,7 +159,7 @@ Chairs half inside walls, boxes sunk into the floor, a cooler drifting at head h
 
 ### Endings
 
-Get out of the last level and you find three holes in a wall, scrawled over in marker: a blue one marked THIS WAY, a yellow one with question marks around it, and a green one that says EXIT :). Each one is a different ending, and none of them are what you think. Every ending is shot in-engine on the camcorder: coming back up through the gap at SKY HIGH at 3:14 in the morning, Mom, the house that might not be your house, the next Saturday at the park, and what stands by the back wall after closing.
+Get out of the last level and you find three holes in a wall, scrawled over in marker: a blue one marked THIS WAY, a yellow one with question marks around it, and a green one that says EXIT :). Each one is a different ending, and none of them are what you think. Every ending is shot in-engine on the camcorder: coming back up through the gap at Route 9 Park at 3:14 in the morning, Mom, the house that might not be your house, the next Saturday at the park, and what stands by the back wall after closing.
 
 ### Lost tapes
 
