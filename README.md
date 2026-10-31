@@ -8,9 +8,9 @@ A first-person Backrooms horror game for **Linux**. (Windows has its own repo: [
 
 You're Dana, working the last closing shift of the week at the Quik-Stop on Route 9. Ring people up, restock, mop. At 10:00 the power dies. You call Ray, the late-night electrician, and take him down to the basement panel. The wiring doesn't go anywhere. Then the floor lets go, and when you land, Ray is gone.
 
-Below: endless yellow offices, concrete warehouses, steam tunnels, the Poolrooms, a level where every light has died. Levels never repeat. Get to the bottom and get out.
+Below: yellow offices, a flooded parking garage, an abandoned office that counts on you, steam tunnels, the Poolrooms, a ball pit the size of a warehouse, a level where every light has died, a suburb of identical houses. Levels never repeat. Get to the bottom and get out.
 
-No combat. You survive by listening, staying quiet, following the arrows the Survey painted on the walls, and running when something finds you.
+No combat. You survive by listening, staying quiet, finding your own way out, and running when something finds you.
 
 | | |
 |---|---|
@@ -20,9 +20,11 @@ No combat. You survive by listening, staying quiet, following the arrows the Sur
 | ![Level 0](docs/screenshots/play.jpg) | ![Flashlight in a dark zone](docs/screenshots/dark.jpg) |
 | ![The Tenant](docs/screenshots/tenant.jpg) | ![The Hound](docs/screenshots/hound.jpg) |
 | ![The Grin](docs/screenshots/grin.jpg) | ![Survey camp](docs/screenshots/camp.jpg) |
-| ![Habitable Zone](docs/screenshots/level1.jpg) | ![Pipe Dreams](docs/screenshots/level2.jpg) |
+| ![Underground Parking](docs/screenshots/parking.jpg) | ![Pipe Dreams](docs/screenshots/level2.jpg) |
 | ![The Poolrooms](docs/screenshots/level3.jpg) | ![Lights Out](docs/screenshots/level4.jpg) |
-| ![Painted arrow](docs/screenshots/clue.jpg) | ![Falling into the next level](docs/screenshots/transition.jpg) |
+| ![Clues on the walls](docs/screenshots/clue.jpg) | ![Falling into the next level](docs/screenshots/transition.jpg) |
+| ![Count On Me](docs/screenshots/countonme.jpg) | ![The Playplace](docs/screenshots/playplace.jpg) |
+| ![The Suburbs](docs/screenshots/suburbs.jpg) | ![EXIT signs near the way out](docs/screenshots/exitsign.jpg) |
 
 ## Install
 
@@ -95,16 +97,19 @@ The only dependency is SDL2. All textures, models and sounds are generated at st
 
 ## The levels
 
-Every Backrooms level is a truly endless space: it wraps around seamlessly, so you can walk in a straight line forever. Find the thin place (listen for the static), fall through it, and you land in the next one.
+Every level is big, but it ends: walk far enough and you hit its edge. Nothing points the way at first. You find the thin place yourself, by exploring and by listening (it hums, louder as you get close). Over the last stretch, green EXIT signs light up overhead and point you in. Fall through and you land in the next level, after the camcorder lands on the floor and you go and pick it up.
 
 | Level | Space | Who lives there |
 |---|---|---|
 | Intro | **The Quik-Stop**: a ten-minute night shift with customers, restocking and spills. Then the lights go out | Customers, Ray |
 | 0 | **The Lobby**: yellow wallpaper, damp carpet, humming lights | The Tenant, the Hound, the Grin, the Stilt |
-| 1 | **Habitable Zone**: cold concrete warehouse, crate stacks, 4 m ceilings | Two Hounds, a Grin |
+| 1 | **Underground Parking**: rows of lettered concrete piers, a low ceiling full of sprinkler pipes, bare tubes, puddles that mirror every light, cars nobody came back for | Two Hounds, a Grin |
+| 33 | **Count On Me**: an office somebody walked out of. Beige walls, dark carpet, a mural about customer service, and two doors onto corridors a metre wide that go on much further than the building does | The Tenant, a Grin, the Stilt |
 | 2 | **Pipe Dreams**: narrow brick tunnels, rusted pipes, orange caged lights | The Tenant, a Hound, a Grin |
 | 37 | **The Poolrooms**: cream tile and clear green water, round columns standing in the pools, raised walkways, sunlight falling through skylights in real shadowed beams, spiral stairs climbing up through round holes in the ceiling, tunnels half under the water. Splashing is loud | The Lifeguard |
-| 4 | **Lights Out**: every fixture dead. The arrows glow | The Tenant and four Grins |
+| 62 | **The Playplace**: a dark hall filled with a sea of plastic balls you wade through, giant hourglass pillars, spiral tube slides coming down out of the ceiling | Grins, Partygoers |
+| 4 | **Lights Out**: every fixture dead. Only the EXIT signs glow | The Tenant and four Grins |
+| 9 | **The Suburbs**: open sky, rolling green hills, the same house over and over to the horizon. One of them has blue tape round its door | A Hound, the Stilt |
 | 188 | **The Courtyard of Windows**: a hotel atrium twelve metres deep, a wall of windows, a lawn far below | ...you |
 | Fun =) | **The Party**: orange and yellow rooms, a carpet covered in letters, balloon arches, a cake on every table. When it's somebody's birthday, get under a table | The Partygoers |
 | ! | **Run For Your Life** | Everything |
@@ -123,7 +128,7 @@ Dana blinks every few seconds, faster when she's scared. The Grin only moves whe
 
 ### Clues on the walls
 
-The Survey painted arrows along the real route to each exit: on the walls beside you, on the wall you're facing at every turn, and on the floor in open rooms. The thin place itself is marked with a door outlined in blue tape, with **EXIT** painted above it. Dead ends say **NOT THIS WAY**. Everything else on the walls is people who didn't make it.
+There are no painted arrows any more: every level is finite, and you have to find the way out yourself. The thin place hums, and the hum carries. Once you're on the last stretch, lit green **EXIT** signs hang from the ceiling and point the way. The thin place itself is a door outlined in blue tape, with **EXIT** painted above it. Dead ends still say **NOT THIS WAY**. Everything else on the walls is people who didn't make it.
 
 ### Saving
 
@@ -181,9 +186,9 @@ Sometimes something just *knows* where you are. An alarm sounds, the lights puls
 
 ## Graphics
 
-**Ray tracing** (on by default; Options → RAY TRACING). The levels are tile grids, so the world shader traces real rays through them on any OpenGL 3.3 GPU, no RT cores needed. Every pixel traces shadow rays to the ceiling fixtures around it: walls, pillars and the people and things walking around block the light, and the panels are area lights, so the shadows are soft. Each fixture gives a proper highlight, and when a light flickers or dies, everything it lit reacts. Glossy floors, wet carpet and pool water trace reflection rays that hit walls, pillars, the ceiling and the lit panels, even ones that are off screen. The baked lightmap still supplies the bounce light.
+**Ray tracing** (on by default; Options → RAY TRACING). The levels are tile grids, so the world shader traces real rays through them on any OpenGL 3.3 GPU, no RT cores needed. Every pixel traces shadow rays to the ceiling fixtures around it: walls, pillars and the people and things walking around block the light, and the panels are area lights, so the shadows are soft. Each fixture gives a proper highlight, and when a light flickers or dies, everything it lit reacts. Glossy floors, wet carpet and pool water trace reflection rays that hit walls, pillars, the ceiling and the lit panels, even ones that are off screen. The baked lightmap still supplies the bounce light, tinted by the walls it bounced off, and the garage's puddles mirror everything.
 
-The camcorder filter (on by default, toggle it in Options) plays everything back like a worn VHS tape: about 330×240 lines of real resolution, smeared chroma that lags behind the picture, a wide barrel lens with rounded CRT corners, crushed blacks and an oversaturated yellow-green grade, tracking jitter, head-switching noise along the bottom, dropouts, and a PLAY / SP / VCR TAPE overlay with a running tape counter.
+The camcorder filter (on by default, toggle it in Options) makes it look like real handheld footage: a slightly soft picture, a gentle lens curve, colour that bleeds a little, sensor noise in the shadows, glow around the lights, a camera that breathes in your hands, and only the occasional tracking wobble. The PLAY / SP / VCR TAPE overlay and the tape counter are recorded onto the picture.
 
 Forward renderer on OpenGL 3.3 with:
 
@@ -223,4 +228,4 @@ See [docs/DESIGN.md](docs/DESIGN.md) for the full plan and [docs/LORE.md](docs/L
 
 ## License
 
-MIT. See [LICENSE](LICENSE). The 8x8 bitmap font is public domain ([dhepper/font8x8](https://github.com/dhepper/font8x8)). The camcorder, menu and title-card text uses **VCR OSD Mono** by Riciery Leal, a free font (`assets/fonts/`), baked into `src/title_font.h` by `tools/make_title_font.py`.
+MIT. See [LICENSE](LICENSE). The 8x8 bitmap font is public domain ([dhepper/font8x8](https://github.com/dhepper/font8x8)). The camcorder, menu and title-card text uses **VCR OSD Mono** by Riciery Leal, a free font (`assets/fonts/`), baked into `src/title_font.h` by `tools/make_title_font.py`. The "Count On Me!" mural is lettered in **Courgette** by Karolina Lach (SIL Open Font License 1.1, `assets/fonts/`) and baked into `src/mural_data.h` by `tools/make_mural.py`.
