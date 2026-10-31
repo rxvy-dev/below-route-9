@@ -93,7 +93,7 @@ The only dependency is SDL2. All textures, models and sounds are generated at st
 | Run | Shift | L3 / LT |
 | Jump | Space | X |
 | Crouch (quiet) | Ctrl or C | B (hold) |
-| NightShot (flashlight in the store) | F or right mouse | LB |
+| NightShot | F or right mouse | LB |
 | Use / read / hide | E or left mouse | A |
 | Let go of Ray | G | Y |
 | Pause | Esc | Start |
@@ -117,9 +117,9 @@ Every level is big, but it ends: walk far enough and you hit its edge. And no le
 | Fun =) | **The Party**: orange and yellow rooms, a carpet covered in letters, balloon arches, a cake on every table. When it's somebody's birthday, get under a table | The Partygoers |
 | ! | **Run For Your Life** | Everything |
 
-### The night shift
+### SKY HIGH
 
-The Quik-Stop is a real store with a real outside. Walk out the front door into the rain: the lot, the gas canopy, the pumps, the cars going by on Route 9. Don't wander too far, though. Customers waiting at the counter will yell after you. Customers park at the pumps or walk in off the sidewalk. Each one picks something off the shelves and carries it to the counter. Key it into the register, take their cash, and put it in the drawer. Be quick: the longer you make them wait, the ruder they get, from "Hello?" to folded arms and knuckles on the counter to storming out. After the power goes, you'll watch Ray's van pull in with its headlights on, then see him cross the lot to the door.
+The trampoline park is a real place on a busy Saturday: a court of beds with blue pads and yellow corner caps, a foam pit, signs high on the walls, cubbies for your shoes, tables at the front. Mom and Dad sit at one of them; Dad's on his phone half the time, Mom keeps an eye on you. Other kids bounce all over the court. You can't help bouncing on a bed, and if you jump right at the bottom of a bounce you go a lot higher. Thirty bounces earns you a badge. One of the beds against the back wall has a pad that's come away from the wall.
 
 ### The suit
 
@@ -127,7 +127,7 @@ There's an empty yellow hazmat suit waiting at the bottom of the fall. Put it on
 
 ### Blinking
 
-Dana blinks every few seconds, faster when she's scared. The Grin only moves when you're not looking at it, and a blink counts. You can turn blinking off in Options.
+You blink every few seconds, faster when you're scared. The Grin only moves when you're not looking at it, and a blink counts. You can turn blinking off in Options.
 
 ### Clues on the walls
 
@@ -167,7 +167,7 @@ Two VHS tapes are hidden on every Backrooms level, sixteen in all, away from the
 
 ### Survey badges
 
-Sixteen badges, each with a pop-up when you earn it. Some are for story moments, some for skill (escape a level without getting caught, or in under three minutes), some for the store (serve 8 customers in one shift), and four are secret until you see the matching ending. **ARCHIVE** shows the full list, which endings you've seen, and a hint for each one you haven't.
+Sixteen badges, each with a pop-up when you earn it. Some are for story moments, some for skill (escape a level without getting caught, or in under three minutes), some for the trampoline park (bounce thirty times), and four are secret until you see the matching ending. **ARCHIVE** shows the full list, which endings you've seen, and a hint for each one you haven't.
 
 ### KEEP FALLING (endless)
 
@@ -191,12 +191,12 @@ Sometimes something just *knows* where you are. An alarm sounds, the lights puls
 
 **Ray tracing** (on by default; Options → RAY TRACING). The levels are tile grids, so the world shader traces real rays through them on any OpenGL 3.3 GPU, no RT cores needed. Every pixel traces shadow rays to the ceiling fixtures around it: walls, pillars and the people and things walking around block the light, and the panels are area lights, so the shadows are soft. Each fixture gives a proper highlight, and when a light flickers or dies, everything it lit reacts. Glossy floors, wet carpet and pool water trace reflection rays that hit walls, pillars, the ceiling and the lit panels, even ones that are off screen. The baked lightmap still supplies the bounce light, tinted by the walls it bounced off, and the garage's puddles mirror everything.
 
-The camcorder filter (on by default, toggle it in Options) makes it look like footage off a 2000s handycam: a 4:3 picture with black bars at the sides (switch to widescreen in Options), captured straight off the tape with square corners (no fake TV screen), a video camera's response instead of a film curve (bright tubes clip hard to white, blacks sit just above black the way consumer video does), colour a little washed and tinted by the auto white balance, the thin bright halos camcorder edge enhancement leaves on every edge, a little glow round the lights, colour noise in the shadows that gets worse as the camera's gain goes up in the dark, an autofocus that hunts now and then, the faint vertical smear a CCD sensor gets under a bright tube, interlace combing when you pan fast, the slow dark band that rolls up the frame when you film under fluorescent lights, and dust drifting through the light close to the lens. Furniture and the things that hunt you sit in their own soft shadow under the ceiling lights, and every sculpted model has fine surface relief (pores, grain, dents) that catches the light. Light bounces: it comes off the floor onto the ceiling, fills the corners of a lit room and leaks a few metres round corners and down corridors, worked out for every level when it's built. On high quality the walls, floors and ceilings are generated at twice the resolution, and people are shaped like people: a chest wider than it is deep, shoulders, shoulder blades, a waist, knees, calves, and eyes set back under proper lids. Somebody is holding it: it breathes (faster when they're scared or out of breath), dips and sways with each footstep, shakes when they run, trembles when something's near, rolls a little into turns and trails your look by a hair. You walk at a walking pace now, with real step lengths, and you take a moment to get going and to stop. The PLAY / SP / VCR TAPE overlay and the tape counter are recorded onto the picture.
+The camcorder filter (on by default, toggle it in Options) makes it look like footage off a 2000s handycam: a 4:3 picture with black bars at the sides (switch to widescreen in Options), captured straight off the tape with square corners (no fake TV screen), a video camera's response instead of a film curve (bright tubes clip hard to white, blacks sit just above black the way consumer video does), colour a little washed and tinted by the auto white balance, the thin bright halos camcorder edge enhancement leaves on every edge, a little glow round the lights, colour noise in the shadows that gets worse as the camera's gain goes up in the dark, an autofocus that hunts now and then, the faint vertical smear a CCD sensor gets under a bright tube, interlace combing when you pan fast, the slow dark band that rolls up the frame when you film under fluorescent lights, and dust drifting through the light close to the lens. Furniture and the things that hunt you sit in their own soft shadow under the ceiling lights, and every sculpted model has fine surface relief (pores, grain, dents) that catches the light. Light bounces: it comes off the floor onto the ceiling, fills the corners of a lit room and leaks a few metres round corners and down corridors, worked out for every level when it's built. On high quality the walls, floors and ceilings are generated at twice the resolution, and people are shaped like people: a chest wider than it is deep, shoulders, shoulder blades, a waist, knees, calves, and eyes set back under proper lids. People and the things down there move like bodies: weight that sways over each foot as they walk, knees that give as the heel lands, forearms that lag the swing, a head that stays level while the body bobs, a forward lean and pumping arms when they run, slow breathing when they stand still (fast when something has you). Floors wear the way real ones do: lanes worn pale and flat down the middle of every corridor, heaviest along the way out, and old stains with dark tide lines. Somebody is holding it: it breathes (faster when they're scared or out of breath), dips and sways with each footstep, shakes when they run, trembles when something's near, rolls a little into turns and trails your look by a hair. You walk at a walking pace now, with real step lengths, and you take a moment to get going and to stop. The PLAY / SP / VCR TAPE overlay and the tape counter are recorded onto the picture.
 
 Forward renderer on OpenGL 3.3 with:
 
 - Sculpted creatures and people (signed-distance-field sculpts meshed with Surface Nets), skinned to skeletons and animated procedurally on the GPU. People come in four outfits (tee and jeans, suit and tie, work jacket and cap, hazmat suit) with faces, hands, belts and shoes
-- First-person hands in the store: the flashlight, cash from the till, the stock box. Below, the flashlight is gone; the camcorder's NightShot mode (green, grainy, with its own infrared lamp) is how you see in the dark
+- No flashlight: the camcorder's NightShot mode (green, grainy, with its own infrared lamp) is how you see in the dark
 - Sunlight with its own orthographic shadow map and volumetric god rays (Poolrooms), caustics under sunlit water, screen-space reflections on the pools
 - Flashlight shadow maps with PCF, GGX specular, subsurface wrap lighting on skin
 - Volumetric flashlight beam and fluorescent haze
