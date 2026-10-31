@@ -17,7 +17,7 @@ No combat. You survive by listening, staying quiet, finding your own way out, an
 | ![Night shift at the Quik-Stop](docs/screenshots/storecustomers.jpg) | ![The power goes out](docs/screenshots/storeout.jpg) |
 | ![Ray at the basement panel](docs/screenshots/storebasement.jpg) | ![Ending: his daughter](docs/screenshots/endingA4.jpg) |
 | ![Ending: home, but wrong](docs/screenshots/endingB5.jpg) | ![Ending: sunrise](docs/screenshots/endingB16.jpg) |
-| ![Level 0](docs/screenshots/play.jpg) | ![Flashlight in a dark zone](docs/screenshots/dark.jpg) |
+| ![Level 0](docs/screenshots/play.jpg) | ![A dark zone](docs/screenshots/dark.jpg) |
 | ![The Tenant](docs/screenshots/tenant.jpg) | ![The Hound](docs/screenshots/hound.jpg) |
 | ![The Grin](docs/screenshots/grin.jpg) | ![Survey camp](docs/screenshots/camp.jpg) |
 | ![Underground Parking](docs/screenshots/parking.jpg) | ![Pipe Dreams](docs/screenshots/level2.jpg) |
@@ -25,6 +25,9 @@ No combat. You survive by listening, staying quiet, finding your own way out, an
 | ![Clues on the walls](docs/screenshots/clue.jpg) | ![Falling into the next level](docs/screenshots/transition.jpg) |
 | ![Count On Me](docs/screenshots/countonme.jpg) | ![The Playplace](docs/screenshots/playplace.jpg) |
 | ![The Suburbs](docs/screenshots/suburbs.jpg) | ![EXIT signs near the way out](docs/screenshots/exitsign.jpg) |
+| ![The pit floor](docs/screenshots/pits.jpg) | ![The closing-down bookstore](docs/screenshots/bookstore.jpg) |
+| ![Stairs to nowhere](docs/screenshots/stairs.jpg) | ![NightShot in Lights Out](docs/screenshots/nightshot.jpg) |
+| ![The trail: footprints, tape and the cord](docs/screenshots/trail.jpg) | ![Somebody's living room](docs/screenshots/livingroom.jpg) |
 
 ## Install
 
@@ -90,14 +93,14 @@ The only dependency is SDL2. All textures, models and sounds are generated at st
 | Run | Shift | L3 / LT |
 | Jump | Space | X |
 | Crouch (quiet) | Ctrl or C | B (hold) |
-| Flashlight | F or right mouse | LB |
+| NightShot (flashlight in the store) | F or right mouse | LB |
 | Use / read / hide | E or left mouse | A |
 | Put Ray down | G | Y |
 | Pause | Esc | Start |
 
 ## The levels
 
-Every level is big, but it ends: walk far enough and you hit its edge. Nothing points the way at first. You find the thin place yourself, by exploring and by listening (it hums, louder as you get close). Over the last stretch, green EXIT signs light up overhead and point you in. Fall through and you land in the next level, after the camcorder lands on the floor and you go and pick it up.
+Every level is big, but it ends: walk far enough and you hit its edge. And no level is one pattern copied over and over: each is split into districts that look and play differently (a huge pillared hall, a tight maze, an older wing with darker walls and lights that won't settle, a stretch where most of the lights are dead, an abandoned office floor of desks, long parallel corridors, a closing-down bookstore of emptied wooden shelving with FOR SALE posters on the pillars, and in the Lobby, Lights Out and Run, a floor that's mostly holes: a grid of narrow walkways over square pits that go down further than you can see), walled off from each other except for a few doorways, most with a landmark to steer by: a tower of boxes, somebody's living room, a ring of chairs around a lantern. Somewhere on every level an old wooden staircase climbs up into a black hole in the ceiling. Step off a walkway in the pit floor and you fall; you come round back at your last checkpoint with the camcorder on the floor. Nothing points the way at first. Someone got out before you, though, and the trail they left gets harder to miss the closer you get. Fall through and you land in the next level, after the camcorder lands on the floor and you go and pick it up.
 
 | Level | Space | Who lives there |
 |---|---|---|
@@ -128,7 +131,7 @@ Dana blinks every few seconds, faster when she's scared. The Grin only moves whe
 
 ### Clues on the walls
 
-There are no painted arrows any more: every level is finite, and you have to find the way out yourself. The thin place hums, and the hum carries. Once you're on the last stretch, lit green **EXIT** signs hang from the ceiling and point the way. The thin place itself is a door outlined in blue tape, with **EXIT** painted above it. Dead ends still say **NOT THIS WAY**. Everything else on the walls is people who didn't make it.
+There are no painted arrows: every level is finite, and you have to find the way out yourself, but someone went this way before you. First there are footprints (not every set of them goes somewhere good). About a third of the way along, strips of blue tape start showing up at the turns, a tab sticking out the way to go. From halfway, an orange extension cord runs along the floor, all the way to the door. Most of the way there, someone has rearranged the letters on a wall to read THE END IS NEAR. Near the end the lights along the way out burn steady while the ones around them die, and lit green **EXIT** signs hang from the ceiling and point you in. The thin place hums, too, and the hum carries. The thin place itself is a door outlined in blue tape, with **EXIT** painted above it. Dead ends still say **NOT THIS WAY**. Everything else on the walls is people who didn't make it.
 
 ### Saving
 
@@ -136,7 +139,7 @@ The game autosaves every 30 seconds (you'll see SAVED at the top of the screen),
 
 ### Hiding
 
-Lockers stand against the walls on every level. Get in one without being seen and whatever is hunting you loses you. If it watched you climb in, it knows. Out in the open, turning your flashlight off in a dark stretch and crouching makes you very hard to spot.
+Lockers stand against the walls on every level. Get in one without being seen and whatever is hunting you loses you. If it watched you climb in, it knows. Out in the open, switching NightShot off in a dark stretch and crouching makes you very hard to spot.
 
 ### Ray
 
@@ -180,7 +183,7 @@ Sometimes something just *knows* where you are. An alarm sounds, the lights puls
 
 - **The Tenant.** Far too tall, stooped under the ceiling. Lights dim and stutter as it gets close. It hunts by sight and sound, and it forgets you once you break line of sight.
 - **The Hound.** On all fours, no eyes. It clicks to hear the room. Running near it is a death sentence; standing still is not.
-- **The Grin.** Lives in the parts where every light has died. It's drawn to your flashlight, and it only moves when you aren't looking at it.
+- **The Grin.** Lives in the parts where every light has died. It's drawn to the camcorder's infrared lamp, and it only moves when you aren't looking at it.
 - **8 notes** from Theo, the Survey and Management. Each one is a checkpoint.
 - **A way out**, if you can find the wall that isn't quite solid. Listen for the static.
 
@@ -193,7 +196,7 @@ The camcorder filter (on by default, toggle it in Options) makes it look like re
 Forward renderer on OpenGL 3.3 with:
 
 - Sculpted creatures and people (signed-distance-field sculpts meshed with Surface Nets), skinned to skeletons and animated procedurally on the GPU. People come in four outfits (tee and jeans, suit and tie, work jacket and cap, hazmat suit) with faces, hands, belts and shoes
-- First-person hands: the flashlight, cash from the till, the stock box
+- First-person hands in the store: the flashlight, cash from the till, the stock box. Below, the flashlight is gone; the camcorder's NightShot mode (green, grainy, with its own infrared lamp) is how you see in the dark
 - Sunlight with its own orthographic shadow map and volumetric god rays (Poolrooms), caustics under sunlit water, screen-space reflections on the pools
 - Flashlight shadow maps with PCF, GGX specular, subsurface wrap lighting on skin
 - Volumetric flashlight beam and fluorescent haze
