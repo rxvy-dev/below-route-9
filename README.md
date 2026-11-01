@@ -66,7 +66,7 @@ Then open **BELOW ROUTE 9** from your app menu, or run `below-route-9`. If your 
 curl -fsSL https://raw.githubusercontent.com/rxvy-dev/Below-Route-9/main/install.sh | bash
 ```
 
-**Updating to a new version (v2.9.0 included): yes, you need to reinstall.** The game doesn't update itself. Delete the old zip and folder, download the new zip, unzip it and run `./install.sh` again. It installs right over the old version, and your saves, tapes, badges and settings are kept.
+**Updating to a new version (v2.9.1 included): yes, you need to reinstall.** The game doesn't update itself. Delete the old zip and folder, download the new zip, unzip it and run `./install.sh` again. It installs right over the old version, and your saves, tapes, badges and settings are kept.
 
 ```sh
 rm -rf Below-Route-9 Below-Route-9-linux.zip
