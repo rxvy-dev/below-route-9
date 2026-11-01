@@ -26,7 +26,7 @@ No combat. You survive by listening, staying quiet, finding your own way out, an
 | ![Count On Me](docs/screenshots/countonme.jpg) | ![The Playplace](docs/screenshots/playplace.jpg) |
 | ![The Suburbs](docs/screenshots/suburbs.jpg) | ![EXIT signs near the way out](docs/screenshots/exitsign.jpg) |
 | ![The pit floor](docs/screenshots/pits.jpg) | ![The closing-down bookstore](docs/screenshots/bookstore.jpg) |
-| ![Stairs to nowhere](docs/screenshots/stairs.jpg) | ![NightShot in Lights Out](docs/screenshots/nightshot.jpg) |
+| ![Stairs to nowhere](docs/screenshots/stairs.jpg) | ![Lights Out](docs/screenshots/nightshot.jpg) |
 | ![The trail: footprints, tape and the cord](docs/screenshots/trail.jpg) | ![Somebody's living room](docs/screenshots/livingroom.jpg) |
 | ![Knocked: the tape jumps, a tracking band tears through, the scratch from the drop](docs/screenshots/knock.jpg) | ![A worn stretch of tape](docs/screenshots/worntape.jpg) |
 | ![Dad, waiting by the tables](docs/screenshots/dad.jpg) | ![Route 9 Park](docs/screenshots/park.jpg) |
@@ -95,21 +95,20 @@ The only dependency is SDL2. All textures, models and sounds are generated at st
 | Run | Shift | L3 / LT |
 | Jump | Space | X |
 | Crouch (quiet) | Ctrl or C | B (hold) |
-| NightShot | F or right mouse | LB |
 | Use / read / hide | E or left mouse | A |
 | Let go of Ray | G | Y |
 | Pause | Esc | Start |
 
 ## The levels
 
-Every level is big, but it ends: walk far enough and you hit its edge. And no level is one pattern copied over and over: each is split into districts that look and play differently (a huge pillared hall, a tight maze, an older wing with darker walls and lights that won't settle, a stretch where most of the lights are dead, an abandoned office floor of desks, long parallel corridors, a closing-down bookstore of emptied wooden shelving with FOR SALE posters on the pillars, and in the Lobby, Lights Out and Run, a floor that's mostly holes: a grid of narrow walkways over square pits that go down further than you can see), walled off from each other except for a few doorways, most with a landmark to steer by: a tower of boxes, somebody's living room, a ring of chairs around a lantern. Somewhere on every level an old wooden staircase climbs up into a black hole in the ceiling. Doors are set into the walls that don't open onto anything. The offices have the things real offices have: light switches, thermostats, a red fire-alarm pull now and then, sprinkler heads and smoke detectors in the ceiling, wallpaper that shows its seams, and no two fluorescent tubes quite the same colour. In the rough parts, ceiling tiles are missing and water stains spread across the rest, and in the dark districts there's sometimes one lit room at the far end of a long black corridor. Step off a walkway in the pit floor and you fall; you come round back at your last checkpoint with the camcorder on the floor. Nothing points the way at first. Someone got out before you, though, and the trail they left gets harder to miss the closer you get. Fall through and you land in the next level. Only the camcorder comes down: it cracks against the floor and lies on its side, still recording, looking down the longest stretch of floor it can see. After a while, footsteps come up behind it, a shadow leans over the lens, and it's picked up from behind.
+Every level is big, but it ends: walk far enough and you hit its edge. And no level is one pattern copied over and over: each is split into districts that look and play differently (a huge pillared hall, a tight maze, an older wing with darker walls and lights that won't settle, a stretch where most of the lights are dead, an abandoned office floor of desks (not in the Lobby, the garage or Count On Me, which are empty), long parallel corridors, a closing-down bookstore of emptied wooden shelving with FOR SALE posters on the pillars, and in the Lobby, Lights Out and Run, a floor that's mostly holes: a grid of narrow walkways over square pits that go down further than you can see), walled off from each other except for a few doorways, most with a landmark to steer by: a tower of boxes, somebody's living room, a ring of chairs around a lantern. The way out goes through the pit floor and the closing-down bookstore when a level has them, so you see them. Somewhere on every level an old wooden staircase climbs up into a black hole in the ceiling. Doors are set into the walls that don't open onto anything. The offices have the things real offices have: light switches, thermostats, a red fire-alarm pull now and then, sprinkler heads and smoke detectors in the ceiling, wallpaper that shows its seams, and no two fluorescent tubes quite the same colour. In the rough parts, ceiling tiles are missing and water stains spread across the rest, and in the dark districts there's sometimes one lit room at the far end of a long black corridor. Step off a walkway in the pit floor and you fall; you come round back at your last checkpoint with the camcorder on the floor. Nothing points the way at first. Someone got out before you, though, and the trail they left gets harder to miss the closer you get. Fall through and you land in the next level. Only the camcorder comes down: it cracks against the floor and lies on its side, still recording, looking down the longest stretch of floor it can see. After a while, footsteps come up behind it, a shadow leans over the lens, and it's picked up from behind.
 
 | Level | Space | Who lives there |
 |---|---|---|
 | Intro | **Route 9 Park**: a Saturday with Mom and Dad. Bounce (you can't help it on a bed; jump at the bottom for a big one), wade the foam pit, and find the gap behind the pads by the back wall | Mom, Dad, other kids |
 | 0 | **The Lobby**: yellow wallpaper, damp carpet, humming lights | The Tenant, the Hound, the Grin, the Stilt |
 | 1 | **Underground Parking**: rows of lettered concrete piers, a low ceiling full of sprinkler pipes, bare tubes, puddles that mirror every light, cars nobody came back for | Two Hounds, a Grin |
-| 33 | **Count On Me**: an office somebody walked out of. Beige walls, dark carpet, a mural about customer service, and two doors onto corridors a metre wide that go on much further than the building does | The Tenant, a Grin, the Stilt |
+| 33 | **Count On Me**: an office somebody walked out of, just like the urbex video: an empty room, beige walls, dark carpet, the "Count On Me!" mural, and a door at each end of it onto an unlit corridor a metre wide that doglegs away from the room and back, much further than the building goes, with one stretch where the Lobby's yellow walls and humming light come through | The Tenant, a Grin, the Stilt |
 | 2 | **Pipe Dreams**: narrow brick tunnels, rusted pipes, orange caged lights | The Tenant, a Hound, a Grin |
 | 37 | **The Poolrooms**: cream tile and clear green water, round columns standing in the pools, raised walkways, sunlight falling through skylights in real shadowed beams, spiral stairs climbing up through round holes in the ceiling, tunnels half under the water. Splashing is loud | The Lifeguard |
 | 62 | **The Playplace**: a dark hall filled with a sea of plastic balls you wade through, giant hourglass pillars, spiral tube slides coming down out of the ceiling | Grins, Partygoers |
@@ -127,10 +126,6 @@ The trampoline park is a real place on a busy Saturday: a court of beds with blu
 
 There's an empty yellow hazmat suit waiting at the bottom of the fall. Put it on. From then on you see your yellow sleeves and black gloves, the edge of the visor, and your breath fogging the glass, and you hear yourself breathing through the respirator.
 
-### Blinking
-
-You blink every few seconds, faster when you're scared. The Grin only moves when you're not looking at it, and a blink counts. You can turn blinking off in Options.
-
 ### Clues on the walls
 
 There are no painted arrows: every level is finite, and you have to find the way out yourself, but someone went this way before you. First there are footprints (not every set of them goes somewhere good). About a third of the way along, strips of blue tape start showing up at the turns, a tab sticking out the way to go. From halfway, an orange extension cord runs along the floor, all the way to the door. Most of the way there, someone has rearranged the letters on a wall to read THE END IS NEAR. Near the end the lights along the way out burn steady while the ones around them die, and lit green **EXIT** signs hang from the ceiling and point you in. The thin place hums, too, and the hum carries. The thin place itself is a door outlined in blue tape, with **EXIT** painted above it. Dead ends still say **NOT THIS WAY**. Everything else on the walls is people who didn't make it.
@@ -141,7 +136,7 @@ The game autosaves every 30 seconds (you'll see SAVED at the top of the screen),
 
 ### Hiding
 
-Lockers stand against the walls on every level. Get in one without being seen and whatever is hunting you loses you. If it watched you climb in, it knows. Out in the open, switching NightShot off in a dark stretch and crouching makes you very hard to spot.
+Lockers stand against the walls on every level. Get in one without being seen and whatever is hunting you loses you. If it watched you climb in, it knows. Out in the open, keeping to a dark stretch and crouching makes you very hard to spot.
 
 ### Ray
 
@@ -173,7 +168,7 @@ Sixteen badges, each with a pop-up when you earn it. Some are for story moments,
 
 ### KEEP FALLING (endless)
 
-See any ending and **KEEP FALLING** unlocks on the title screen. There's no trampoline park and no Ray: you just fall from one random level into the next, forever. Every depth is meaner than the last, with hunts that come sooner and more often, fewer batteries and almond water, darker halls and more things walking them. Get caught once and the run is over. Your best depth is saved.
+See any ending and **KEEP FALLING** unlocks on the title screen. There's no trampoline park and no Ray: you just fall from one random level into the next, forever. Every depth is meaner than the last, with hunts that come sooner and more often, less almond water, darker halls and more things walking them. Get caught once and the run is over. Your best depth is saved.
 
 **TODAY'S FALL** is the same run for everyone on the same day (it's seeded from the date), with its own best that resets at midnight UTC.
 
@@ -207,13 +202,15 @@ The camera moves like a scared kid is holding it. Walking, it's careful: soft fo
 
 Between levels, the game cuts up top. The search goes on the same Saturday, getting later each time: Mom calling for you across the court at 3:40, the front desk on the PA at 4:30, the police at 6:15, Dad on his knees at the gap behind the pad at 7:40 ("Then why can I hear humming?"), Mom at home by the phone, the eleven o'clock news, Dad refusing to leave when they lock up, the TV still on at 2 AM, and the park's own security camera at 3:00 and 3:13. Every line is voiced; any key skips a shot. You can hear the camcorder itself now, the way its mic picks it up: tape hiss, the capstan motor's low whir, the faint 60 Hz buzz of the video heads, and the click, clunk and spin-up of the record button every time the camera is picked up. And you can hear yourself breathe: slow and quiet standing still, quick and hard when you run, and when you're scared it catches, stutters, and gets a whimper in it. Hiding, you hold it in.
 
+The kids at Route 9 Park have children's bodies now, not shrunk adults: a head a sixth of their height, short legs, narrow shoulders, a short thin neck, a round tummy, and a child's face (a big smooth forehead, eyes nearly adult-sized so they look big, round rosy cheeks, a button nose, a small chin), in tees with shorts or leggings and the park's yellow grip socks. On the trampolines their knees fold as the bed takes them and their arms swing up through the flight, and a ponytail floats up at the top of a bounce. In a drop ceiling the lights are real recessed troffers: an opening in the T-bar grid with a white steel door frame, the lens set back up inside so you see its inner sides lit and, from an angle, not all of the lens; the grid itself stands a few millimetres proud of the tiles and lines up with the fixtures, and a light that's off is a grey plastic lens, not a black hole. Wall ends, corners and pillars have rounded corner bead that catches the light in a soft line. Every light at Route 9 Park works. The camera shakes like it's in a kid's hands: it's never still, there's a fine tremor on top of the drift and the breathing, and walking and running knock it about harder. When something comes for you, you get a second wind: full breath and slow to tire, so if you run flat out for the exit you make it. Cars in the garage are parked in clear bays instead of halfway into the piers, people in the cutscenes face who they're talking to, and the cutscene you see goes by the level you just left.
+
 Forward renderer on OpenGL 3.3 with:
 
 - Sculpted creatures and people (signed-distance-field sculpts meshed with Surface Nets), skinned to skeletons and animated procedurally on the GPU. People come in four outfits (tee and jeans, suit and tie, work jacket and cap, hazmat suit) with faces, hands, belts and shoes
-- No flashlight: the camcorder's NightShot mode (green, grainy, with its own infrared lamp) is how you see in the dark
+- No light of your own: no flashlight, no lamp on the camera, no night vision. The dark is dark, and the only light down there is whatever the place still has. Where most of it has died, the odd failing tube still flickers along the way, each one in sight of the next
 - Sunlight with its own orthographic shadow map and volumetric god rays (Poolrooms), caustics under sunlit water, screen-space reflections on the pools
-- Flashlight shadow maps with PCF, GGX specular, subsurface wrap lighting on skin
-- Volumetric flashlight beam and fluorescent haze
+- Shadow maps with PCF, GGX specular, subsurface wrap lighting on skin
+- Volumetric fluorescent haze
 - SSAO, baked per-light visibility for hundreds of flickering ceiling lights
 - HDR bloom chain, ACES tonemapping and colour grade, FXAA
 - Optional camcorder look: tape jitter, chroma bleed, scanlines, timestamp
@@ -249,4 +246,4 @@ See [docs/DESIGN.md](docs/DESIGN.md) for the full plan and [docs/LORE.md](docs/L
 
 ## License
 
-MIT. See [LICENSE](LICENSE). The 8x8 bitmap font is public domain ([dhepper/font8x8](https://github.com/dhepper/font8x8)). The camcorder, menu and title-card text uses **VCR OSD Mono** by Riciery Leal, a free font (`assets/fonts/`), baked into `src/title_font.h` by `tools/make_title_font.py`. The "Count On Me!" mural is lettered in **Courgette** by Karolina Lach (SIL Open Font License 1.1, `assets/fonts/`) and baked into `src/mural_data.h` by `tools/make_mural.py`. Photo textures are read with [stb_image](https://github.com/nothings/stb) by Sean Barrett (public domain). The voices were generated with [Piper](https://github.com/rhasspy/piper) (MIT) using its LibriTTS voice, trained on the [LibriTTS corpus](http://www.openslr.org/60/) (CC BY 4.0, Zen et al., from LibriVox recordings); `tools/make_voices.py` lists every line, regenerates them and packs them into `src/voices_data.h`.
+MIT. See [LICENSE](LICENSE). The 8x8 bitmap font is public domain ([dhepper/font8x8](https://github.com/dhepper/font8x8)). The camcorder, menu and title-card text uses **VCR OSD Mono** by Riciery Leal, a free font (`assets/fonts/`), baked into `src/title_font.h` by `tools/make_title_font.py`. The "Count On Me!" mural is lettered in **Yellowtail** by Astigmatic (Apache License 2.0, `assets/fonts/`) and baked into `src/mural_data.h` by `tools/make_mural.py`. Photo textures are read with [stb_image](https://github.com/nothings/stb) by Sean Barrett (public domain). The voices were generated with [Piper](https://github.com/rhasspy/piper) (MIT) using its LibriTTS voice, trained on the [LibriTTS corpus](http://www.openslr.org/60/) (CC BY 4.0, Zen et al., from LibriVox recordings); `tools/make_voices.py` lists every line, regenerates them and packs them into `src/voices_data.h`.
