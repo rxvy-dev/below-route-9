@@ -81,6 +81,7 @@ if [ "$UNINSTALL" = 1 ]; then
   for f in "bin/${APP}" "share/applications/${APP}.desktop" "share/icons/hicolor/scalable/apps/${APP}.svg"; do
     if [ -e "${PREFIX}/${f}" ]; then prefix_cmd rm -f "${PREFIX}/${f}"; ok "removed ${PREFIX}/${f}"; fi
   done
+  if [ -d "${PREFIX}/share/${APP}" ]; then prefix_cmd rm -rf "${PREFIX}/share/${APP}"; ok "removed ${PREFIX}/share/${APP}"; fi
   printf '%sSaves and settings were kept in %s and %s.%s\n' "$D" \
     "${XDG_DATA_HOME:-$HOME/.local/share}/below-route-9" "${XDG_CONFIG_HOME:-$HOME/.config}/below-route-9" "$N"
   exit 0
