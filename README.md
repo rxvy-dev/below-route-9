@@ -47,7 +47,7 @@ cd Below-Route-9
 ./install.sh
 ```
 
-**Or from git:**
+**Or straight from the terminal:**
 
 ```sh
 wget https://github.com/rxvy-dev/below-route-9/raw/refs/heads/main/Below-Route-9-linux.zip
@@ -66,7 +66,17 @@ Then open **BELOW ROUTE 9** from your app menu, or run `below-route-9`. If your 
 curl -fsSL https://raw.githubusercontent.com/rxvy-dev/Below-Route-9/main/install.sh | bash
 ```
 
-**Update:** `git pull && ./install.sh` from the folder. **Uninstall:** `./install.sh --uninstall` (your saves are kept).
+**Updating to a new version (v2.8.0 included): yes, you need to reinstall.** The game doesn't update itself. Delete the old zip and folder, download the new zip, unzip it and run `./install.sh` again. It installs right over the old version, and your saves, tapes, badges and settings are kept.
+
+```sh
+rm -rf Below-Route-9 Below-Route-9-linux.zip
+wget https://github.com/rxvy-dev/below-route-9/raw/refs/heads/main/Below-Route-9-linux.zip
+unzip Below-Route-9-linux.zip && cd Below-Route-9 && ./install.sh
+```
+
+Don't use `wget -c` for this. It resumes onto the old zip and leaves you with a broken one (see [Troubleshooting](#troubleshooting)).
+
+**Uninstall:** `./install.sh --uninstall` (your saves are kept).
 
 | Installer option | What it does |
 |---|---|
@@ -238,6 +248,7 @@ Saves live in `$XDG_DATA_HOME/below-route-9` (default `~/.local/share/below-rout
 
 - **"OpenGL 3.3 is required"**: update Mesa, or install your GPU's driver. Check with `glxinfo -B`.
 - **No sound**: SDL picks PipeWire, PulseAudio or ALSA automatically. Try `SDL_AUDIODRIVER=pulseaudio below-route-9` or `SDL_AUDIODRIVER=alsa below-route-9`.
+- **`unzip` says "bad zipfile offset", or there's no `install.sh` after unzipping**: the download is corrupted. This usually happens when `wget -c` resumes onto an older zip with the same name. Delete the zip and the half-extracted folder (`rm -rf Below-Route-9 Below-Route-9-linux.zip`) and download it again without `-c`.
 - **Low frame rate**: set Graphics to Medium or Low in Options.
 
 ## Roadmap
